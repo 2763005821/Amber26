@@ -1,0 +1,161 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0">
+  <diagram id="diagram_1" name="技术路线图">
+    <mxGraphModel dx="2054" dy="1119" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YSQT4M9nve0keJToR6m5-44" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontStyle=1;fontColor=#000000;" value="HLA-B*40:01 限制性 HBV 表位特异性 TCRm 的深度生成设计与功能验证" vertex="1">
+          <mxGeometry height="40" width="1000" x="270" y="69.99667480468747" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-45" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;dashed=1;verticalAlign=top;fontStyle=1;fontSize=15;align=left;spacingLeft=15;spacingTop=10;" value="问题分析" vertex="1">
+          <mxGeometry height="220" width="320" x="110" y="129.99667480468747" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-46" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontColor=#000000;fontSize=14;" value="临床需求&lt;br&gt;CHB功能性治愈，CD8+ T细胞耗竭" vertex="1">
+          <mxGeometry height="60" width="280" x="130" y="169.99667480468747" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-47" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontColor=#000000;fontSize=14;" value="科学问题&lt;br&gt;免疫逃逸机制未明，TCRm设计空白" vertex="1">
+          <mxGeometry height="60" width="280" x="130" y="249.99667480468747" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-48" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;dashed=1;verticalAlign=top;fontStyle=1;fontSize=15;align=left;spacingLeft=15;spacingTop=10;" value="数据准备" vertex="1">
+          <mxGeometry height="220" width="320" x="450" y="129.99667480468747" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-49" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontColor=#000000;fontSize=14;" value="TCR参考骨架&lt;br&gt;单细胞V(D)J测序重建" vertex="1">
+          <mxGeometry height="60" width="280" x="470" y="169.99667480468747" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-50" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontColor=#000000;fontSize=14;" value="pMHC结构输入&lt;br&gt;HLA-B*40:01(P01889)+β2M; WT及逃逸突变表位" vertex="1">
+          <mxGeometry height="60" width="280" x="470" y="249.99667480468747" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-51" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;dashed=1;verticalAlign=top;fontStyle=1;fontSize=15;align=left;spacingLeft=15;spacingTop=10;" value="免疫逃逸分析（设计约束）" vertex="1">
+          <mxGeometry height="220" width="640" x="790" y="129.99667480468747" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-52" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontColor=#000000;fontSize=13;" value="复合物预测&lt;br&gt;AlphaFold3-Multimer (5种子, recycling=3)" vertex="1">
+          <mxGeometry height="60" width="180" x="810" y="169.99667480468747" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-53" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontColor=#000000;fontSize=13;" value="结构与接触分析&lt;br&gt;Shrake-Rupley SASA + 4.5Å接触计数" vertex="1">
+          <mxGeometry height="60" width="180" x="1010" y="169.99667480468747" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-54" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontColor=#000000;fontSize=13;" value="能量分解&lt;br&gt;Rosetta/MM-PBSA 逐残基ΔΔG" vertex="1">
+          <mxGeometry height="60" width="180" x="1210" y="169.99667480468747" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-55" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontStyle=1;fontColor=#000000;fontSize=14;" value="双机制逃逸框架&lt;br&gt;P9/P2锚点突变结合逃逸(F132Y); P4-P6接触面突变识别逃逸(I127T)" vertex="1">
+          <mxGeometry height="60" width="580" x="810" y="259.9966748046875" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-56" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;dashed=1;verticalAlign=top;fontStyle=1;fontSize=15;align=left;spacingLeft=15;spacingTop=10;" value="TCRm 类似物设计（多工具协同深度生成）" vertex="1">
+          <mxGeometry height="240" width="1320" x="110" y="429.9966748046875" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-87" edge="1" parent="1" source="YSQT4M9nve0keJToR6m5-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-57" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontColor=#000000;fontSize=13;" value="骨架生成&lt;br&gt;RFdiffusion Motif Scaffolding&lt;br&gt;Hotspot: P4-P6 (C3-C8) / 约束RMSD≤0.5Å" vertex="1">
+          <mxGeometry height="110" width="280" x="130" y="469.9966748046875" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-58" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontColor=#000000;fontSize=13;" value="序列回填&lt;br&gt;ProteinMPNN (T=0.1/0.3/0.5)&lt;br&gt;ESM-IF (T=0.3) / 共70条" vertex="1">
+          <mxGeometry height="110" width="280" x="450" y="469.9966748046875" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-59" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontColor=#000000;fontSize=13;" value="自洽复核与能量优化&lt;br&gt;AlphaFold2 Multimer: pLDDT≥70, ipTM≥0.60&lt;br&gt;Rosetta Energy Minimization / MolProbity质检" vertex="1">
+          <mxGeometry height="110" width="280" x="770" y="469.9966748046875" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-60" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontColor=#000000;fontSize=13;align=left;spacingLeft=10;" value="第一道反馈（设计层）&lt;br&gt;若复核pLDDT&lt;70或偏离P5热点，增加采样步数至50步或调整权重后重新生成" vertex="1">
+          <mxGeometry height="110" width="320" x="1090" y="469.9966748046875" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-61" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;dashed=1;verticalAlign=top;fontStyle=1;fontSize=15;align=left;spacingLeft=15;spacingTop=10;" value="生信与实验筛选（漏斗式分级验证）" vertex="1">
+          <mxGeometry height="320" width="1320" x="110" y="709.9966748046875" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-62" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontColor=#000000;fontSize=13;" value="生信筛选①：接触偏好审计&lt;br&gt;Peptide/MHC接触比R≥2.0" vertex="1">
+          <mxGeometry height="80" width="220" x="130" y="749.9966748046875" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-63" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontColor=#000000;fontSize=13;" value="生信筛选②：结构界面质量&lt;br&gt;ΔG≤-8.0 kcal/mol 且 SC≥0.65" vertex="1">
+          <mxGeometry height="80" width="220" x="370" y="749.9966748046875" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-64" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontColor=#000000;fontSize=13;" value="生信筛选③：抗逃逸压力测试&lt;br&gt;对F132Y/I127T的ΔΔG≤1.5 kcal/mol" vertex="1">
+          <mxGeometry height="80" width="220" x="610" y="749.9966748046875" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-65" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontColor=#000000;fontSize=13;" value="生信筛选④：脱靶风险评估&lt;br&gt;HLA-B*40:01预测肽库与自身肽面板" vertex="1">
+          <mxGeometry height="80" width="220" x="850" y="749.9966748046875" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-66" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontStyle=1;fontColor=#000000;fontSize=13;" value="候选定位：5-10个优选进入湿实验" vertex="1">
+          <mxGeometry height="80" width="320" x="1090" y="749.9966748046875" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-67" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontColor=#000000;fontSize=14;" value="实验验证：分子层&lt;br&gt;SPR/BLI亲和力动力学 / DSF热稳定性" vertex="1">
+          <mxGeometry height="60" width="280" x="330" y="869.9966748046875" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-68" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontColor=#000000;fontSize=14;" value="实验验证：细胞层&lt;br&gt;pMHC Tetramer / Jurkat-NFAT / 原代T细胞杀伤" vertex="1">
+          <mxGeometry height="60" width="280" x="650" y="869.9966748046875" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-69" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;fontColor=#000000;fontSize=14;" value="安全性与抗逃逸评价&lt;br&gt;Ala扫描 / 自身肽 / 正常组织 / 逃逸变体EC50倍比" vertex="1">
+          <mxGeometry height="60" width="340" x="970" y="869.9966748046875" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-70" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F3;strokeColor=#000000;strokeWidth=2;fontStyle=1;fontColor=#000000;fontSize=16;" value="最终产出：2-3个高亲和、高特异、抗逃逸验证通过候选" vertex="1">
+          <mxGeometry height="60" width="600" x="470" y="969.9966748046875" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-71" edge="1" parent="1" source="YSQT4M9nve0keJToR6m5-45" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#000000;strokeWidth=2;endArrow=classic;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="YSQT4M9nve0keJToR6m5-48" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-72" edge="1" parent="1" source="YSQT4M9nve0keJToR6m5-48" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#000000;strokeWidth=2;endArrow=classic;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="YSQT4M9nve0keJToR6m5-51" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-73" edge="1" parent="1" source="YSQT4M9nve0keJToR6m5-51" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#000000;strokeWidth=2;endArrow=classic;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="YSQT4M9nve0keJToR6m5-56" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-74" edge="1" parent="1" source="YSQT4M9nve0keJToR6m5-56" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#000000;strokeWidth=2;endArrow=classic;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="YSQT4M9nve0keJToR6m5-61" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-75" edge="1" parent="1" source="YSQT4M9nve0keJToR6m5-62" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="YSQT4M9nve0keJToR6m5-63" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-76" edge="1" parent="1" source="YSQT4M9nve0keJToR6m5-63" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="YSQT4M9nve0keJToR6m5-64" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-77" edge="1" parent="1" source="YSQT4M9nve0keJToR6m5-64" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="YSQT4M9nve0keJToR6m5-65" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-78" edge="1" parent="1" source="YSQT4M9nve0keJToR6m5-65" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="YSQT4M9nve0keJToR6m5-66" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-79" edge="1" parent="1" source="YSQT4M9nve0keJToR6m5-66" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#000000;strokeWidth=2;endArrow=classic;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="YSQT4M9nve0keJToR6m5-67" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="839.9966748046875" />
+              <mxPoint x="470" y="839.9966748046875" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-80" edge="1" parent="1" source="YSQT4M9nve0keJToR6m5-67" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#000000;strokeWidth=2;endArrow=classic;endFill=1;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" target="YSQT4M9nve0keJToR6m5-68" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-81" edge="1" parent="1" source="YSQT4M9nve0keJToR6m5-68" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#000000;strokeWidth=2;endArrow=classic;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="YSQT4M9nve0keJToR6m5-69" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-82" edge="1" parent="1" source="YSQT4M9nve0keJToR6m5-69" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#000000;strokeWidth=2;endArrow=classic;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="YSQT4M9nve0keJToR6m5-70" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-83" edge="1" parent="1" source="YSQT4M9nve0keJToR6m5-60" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#c53030;strokeWidth=2;dashed=1;endArrow=classic;endFill=1;exitX=0.5;exitY=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="YSQT4M9nve0keJToR6m5-57" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1250" y="430" />
+              <mxPoint x="270" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-84" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#c53030;strokeWidth=2;dashed=1;fontStyle=1;fontColor=#c53030;fontSize=13;" value="反馈回路：EC50≥5倍或KD&gt;500nM时优化" vertex="1">
+          <mxGeometry height="40" width="340" x="600" y="1119.9966748046875" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-85" edge="1" parent="1" source="YSQT4M9nve0keJToR6m5-70" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#c53030;strokeWidth=2;dashed=1;endArrow=classic;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="YSQT4M9nve0keJToR6m5-84" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YSQT4M9nve0keJToR6m5-86" edge="1" parent="1" source="YSQT4M9nve0keJToR6m5-84" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#c53030;strokeWidth=2;dashed=1;endArrow=classic;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=1;" target="YSQT4M9nve0keJToR6m5-56" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1600" y="1070" />
+              <mxPoint x="1530" y="1070" />
+              <mxPoint x="1530" y="690" />
+              <mxPoint x="770" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
