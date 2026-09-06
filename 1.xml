@@ -1,0 +1,126 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0">
+  <diagram id="diagram_1" name="技术路线图">
+    <mxGraphModel dx="2054" dy="1119" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ujpSyfgMxM21q7df8Gwy-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="1270" width="1604" x="100" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="stage1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ebf8ff;strokeColor=#B3B3B3;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=14;fontColor=#1a365d;spacingTop=10;arcSize=0;dashed=1;" value="阶段一：结构解析" vertex="1">
+          <mxGeometry height="160" width="1320" x="204" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_l" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ebf8ff;strokeColor=#3182ce;strokeWidth=2;fontStyle=1;fontSize=14;fontColor=#1a365d;" value="结构解析" vertex="1">
+          <mxGeometry height="160" width="80" x="76" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_c1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#3182ce;spacing=10;align=left;spacingLeft=15;" value="&lt;b&gt;复合物预测&lt;/b&gt;&lt;br&gt;AlphaFold3-Multimer&lt;br&gt;参数：5种子，recycling=3&lt;br&gt;pLDDT≥70, ipTM≥0.60" vertex="1">
+          <mxGeometry height="100" width="176" x="240" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_c2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#3182ce;spacing=10;align=left;spacingLeft=15;" value="&lt;b&gt;界面分析&lt;/b&gt;&lt;br&gt;Rosetta InterfaceAnalyzer&lt;br&gt;接触计数、氢键、SC、SASA&lt;br&gt;P2/P9锚点，P4-P6暴露" vertex="1">
+          <mxGeometry height="100" width="320" x="520" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_c3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#3182ce;spacing=10;align=left;spacingLeft=15;" value="&lt;b&gt;能量分解&lt;/b&gt;&lt;br&gt;MD/MM-PBSA (AMBER)&lt;br&gt;逐残基自由能分解&lt;br&gt;ΔΔG≈-10.9 (K130M结合增强)" vertex="1">
+          <mxGeometry height="100" width="320" x="994" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_out" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fefcbf;strokeColor=#d69e2e;strokeWidth=2;fontStyle=1;fontSize=14;" value="设计约束&lt;br&gt;+ 逃逸框架" vertex="1">
+          <mxGeometry height="110" width="140" x="1344" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="a12" edge="1" parent="1" source="stage1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=12;fontColor=#64748b;endArrow=classic;endFill=1;" target="stage2" value="↕ 可迭代">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stage2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fff4;strokeColor=#B3B3B3;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=14;fontColor=#22543d;spacingTop=10;arcSize=0;dashed=1;" value="阶段二：深度设计" vertex="1">
+          <mxGeometry height="160" width="1320" x="204" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_l" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fff4;strokeColor=#38a169;strokeWidth=2;fontStyle=1;fontSize=14;fontColor=#22543d;" value="深度设计" vertex="1">
+          <mxGeometry height="160" width="80" x="76" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_c1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#38a169;spacing=10;align=left;spacingLeft=15;" value="&lt;b&gt;骨架生成&lt;/b&gt;&lt;br&gt;RFdiffusion (去噪扩散模型)&lt;br&gt;Motif Scaffolding模式&lt;br&gt;Hotspot: 肽段C3-C8" vertex="1">
+          <mxGeometry height="100" width="320" x="314" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_c2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#38a169;spacing=10;align=left;spacingLeft=15;" value="&lt;b&gt;序列回填&lt;/b&gt;&lt;br&gt;ProteinMPNN + ESM-IF&lt;br&gt;逆折叠多序列采样 (50条)&lt;br&gt;采样温度0.1" vertex="1">
+          <mxGeometry height="100" width="320" x="654" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_c3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#38a169;spacing=10;align=left;spacingLeft=15;" value="&lt;b&gt;自洽复核&lt;/b&gt;&lt;br&gt;AlphaFold2/3回测验证&lt;br&gt;pLDDT≥70, ipTM≥0.60&lt;br&gt;Rosetta能量最小化" vertex="1">
+          <mxGeometry height="100" width="320" x="994" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_out" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fff4;strokeColor=#38a169;strokeWidth=2;fontStyle=1;fontSize=14;" value="20-30 个&lt;br&gt;候选 TCRm" vertex="1">
+          <mxGeometry height="110" width="140" x="1344" y="335" as="geometry" />
+        </mxCell>
+        <mxCell id="a23" edge="1" parent="1" source="stage2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=12;fontColor=#64748b;endArrow=classic;endFill=1;" target="stage3" value="↕ 可迭代">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stage3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffaf0;strokeColor=#B3B3B3;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=14;fontColor=#7b341e;spacingTop=10;arcSize=0;dashed=1;" value="阶段三：计算预筛选" vertex="1">
+          <mxGeometry height="160" width="1320" x="204" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_l" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffaf0;strokeColor=#dd6b20;strokeWidth=2;fontStyle=1;fontSize=14;fontColor=#7b341e;" value="计算筛选" vertex="1">
+          <mxGeometry height="160" width="80" x="76" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_c1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dd6b20;spacing=10;align=left;spacingLeft=15;" value="&lt;b&gt;特异性筛选&lt;/b&gt;&lt;br&gt;Peptide-centric接触审计&lt;br&gt;肽/MHC接触比 ≥ 2&lt;br&gt;避免非特异性MHC骨架接触" vertex="1">
+          <mxGeometry height="100" width="320" x="314" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_c2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dd6b20;spacing=10;align=left;spacingLeft=15;" value="&lt;b&gt;安全性筛选&lt;/b&gt;&lt;br&gt;HLA-B*40:01预测肽库&lt;br&gt;自身肽面板 + Ala扫描&lt;br&gt;脱靶风险预测" vertex="1">
+          <mxGeometry height="100" width="320" x="654" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_c3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dd6b20;spacing=10;align=left;spacingLeft=15;" value="&lt;b&gt;抗逃逸压力测试&lt;/b&gt;&lt;br&gt;WT vs F132Y (结合逃逸)&lt;br&gt;WT vs I127T (识别逃逸)&lt;br&gt;输出“逃逸覆盖矩阵”" vertex="1">
+          <mxGeometry height="100" width="320" x="994" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_out" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffaf0;strokeColor=#dd6b20;strokeWidth=2;fontStyle=1;fontSize=14;" value="5-10 个优选&lt;br&gt;+ 逃逸矩阵" vertex="1">
+          <mxGeometry height="110" width="140" x="1344" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="a34" edge="1" parent="1" source="stage3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=12;fontColor=#64748b;endArrow=classic;endFill=1;" target="stage4" value="↕ 可迭代">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stage4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#B3B3B3;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=14;fontColor=#742a2a;spacingTop=10;arcSize=0;dashed=1;" value="阶段四：分级功能验证" vertex="1">
+          <mxGeometry height="160" width="1320" x="204" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_l" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#e53e3e;strokeWidth=2;fontStyle=1;fontSize=14;fontColor=#742a2a;" value="功能验证" vertex="1">
+          <mxGeometry height="160" width="80" x="76" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_c1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e53e3e;spacing=10;align=left;spacingLeft=15;" value="&lt;b&gt;分子与生化实验&lt;/b&gt;&lt;br&gt;SPR/BLI (KD, kon, koff)&lt;br&gt;DSF/nanoDSF (Tm稳定性)&lt;br&gt;pMHC tetramer染色" vertex="1">
+          <mxGeometry height="100" width="320" x="314" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_c2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e53e3e;spacing=10;align=left;spacingLeft=15;" value="&lt;b&gt;细胞功能实验&lt;/b&gt;&lt;br&gt;Jurkat-NFAT报告系统初筛&lt;br&gt;原代TCR-T细胞功能验证&lt;br&gt;IFN-γ/IL-2/TNF-α + 实时杀伤" vertex="1">
+          <mxGeometry height="100" width="320" x="654" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_c3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e53e3e;spacing=10;align=left;spacingLeft=15;" value="&lt;b&gt;特异性与安全性&lt;/b&gt;&lt;br&gt;Ala扫描 / 自身肽面板&lt;br&gt;正常组织细胞交叉反应&lt;br&gt;逃逸变体挑战 (EC50倍比&lt;5)" vertex="1">
+          <mxGeometry height="100" width="320" x="994" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_out" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#e53e3e;strokeWidth=2;fontStyle=1;fontSize=14;" value="2-3 个&lt;br&gt;验证通过候选" vertex="1">
+          <mxGeometry height="110" width="140" x="1344" y="735" as="geometry" />
+        </mxCell>
+        <mxCell id="feedback" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fdf2f2;strokeColor=#fc8181;strokeWidth=2;strokeDashArray=4 4;fontStyle=1;fontSize=13;fontColor=#c53030;fontWeight=bold;verticalAlign=middle;" value="↺ 反馈回路：若细胞层对逃逸变体EC50倍比变化 ≥ 5，或KD &gt; 500nM，返回阶段二重新生成" vertex="1">
+          <mxGeometry height="60" width="1320" x="200" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="fb_edge" edge="1" parent="1" source="stage4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#fc8181;strokeWidth=2;strokeDashArray=4 4;endArrow=classic;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="864" y="970" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fb_edge2" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#fc8181;strokeWidth=2;strokeDashArray=4 4;endArrow=classic;endFill=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="stage2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="864" y="940" />
+              <mxPoint x="864" y="470" />
+            </Array>
+            <mxPoint x="864" y="910" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link1" edge="1" parent="1" source="s1_c3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#3182ce;strokeWidth=1;endArrow=classic;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="s1_out" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link2" edge="1" parent="1" source="s2_c3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#38a169;strokeWidth=1;endArrow=classic;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="s2_out" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link3" edge="1" parent="1" source="s3_c3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#dd6b20;strokeWidth=1;endArrow=classic;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="s3_out" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link4" edge="1" parent="1" source="s4_c3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#e53e3e;strokeWidth=1;endArrow=classic;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="s4_out" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ujpSyfgMxM21q7df8Gwy-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size:12.0pt;mso-bidi-font-size:10.0pt;&lt;br/&gt;font-family:宋体;mso-ascii-font-family:&amp;quot;Times New Roman&amp;quot;;mso-hansi-font-family:&lt;br/&gt;&amp;quot;Times New Roman&amp;quot;;mso-bidi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-font-kerning:1.0pt;&lt;br/&gt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA;&lt;br/&gt;mso-bidi-font-weight:bold&quot;&gt;基于人工智能深度生成设计的&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:&amp;quot;Times New Roman&amp;quot;,serif;&lt;br/&gt;mso-fareast-font-family:宋体;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;&lt;br/&gt;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA;mso-bidi-font-weight:bold&quot;&gt;HLA-B*40:01&lt;/span&gt;&lt;span style=&quot;font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:&lt;br/&gt;&amp;quot;Times New Roman&amp;quot;;mso-hansi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-font-family:&lt;br/&gt;&amp;quot;Times New Roman&amp;quot;;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:&lt;br/&gt;ZH-CN;mso-bidi-language:AR-SA;mso-bidi-font-weight:bold&quot;&gt;限制性&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:&amp;quot;Times New Roman&amp;quot;,serif;&lt;br/&gt;mso-fareast-font-family:宋体;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;&lt;br/&gt;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA;mso-bidi-font-weight:bold&quot;&gt;HBV&lt;/span&gt;&lt;span style=&quot;font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:&lt;br/&gt;&amp;quot;Times New Roman&amp;quot;;mso-hansi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-font-family:&lt;br/&gt;&amp;quot;Times New Roman&amp;quot;;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:&lt;br/&gt;ZH-CN;mso-bidi-language:AR-SA;mso-bidi-font-weight:bold&quot;&gt;免疫逃逸表位靶向&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:&amp;quot;Times New Roman&amp;quot;,serif;&lt;br/&gt;mso-fareast-font-family:宋体;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;&lt;br/&gt;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA;mso-bidi-font-weight:bold&quot;&gt;TCR&lt;/span&gt;&lt;span style=&quot;font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:&lt;br/&gt;&amp;quot;Times New Roman&amp;quot;;mso-hansi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-font-family:&lt;br/&gt;&amp;quot;Times New Roman&amp;quot;;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:&lt;br/&gt;ZH-CN;mso-bidi-language:AR-SA;mso-bidi-font-weight:bold&quot;&gt;模拟物（&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:&amp;quot;Times New Roman&amp;quot;,serif;&lt;br/&gt;mso-fareast-font-family:宋体;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;&lt;br/&gt;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA;mso-bidi-font-weight:bold&quot;&gt;TCRm&lt;/span&gt;&lt;span style=&quot;font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:&lt;br/&gt;&amp;quot;Times New Roman&amp;quot;;mso-hansi-font-family:&amp;quot;Times New Roman&amp;quot;;mso-bidi-font-family:&lt;br/&gt;&amp;quot;Times New Roman&amp;quot;;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:&lt;br/&gt;ZH-CN;mso-bidi-language:AR-SA;mso-bidi-font-weight:bold&quot;&gt;）的设计与功能验证&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="950" x="325" y="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
